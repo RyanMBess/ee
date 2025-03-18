@@ -9,15 +9,12 @@ options:
   package_manager_path: /usr/bin/microdnf
 
 dependencies:
-  system:
-    - git
-    - curl
-  python:
-    - jmespath==0.10.0
-    - requests
   galaxy:
     collections:
-      - name: community.general
-        version: "10.4.0"
-      - name: paloaltonetworks.panos
-        version: 2.21.4
+      - infra.controller_configuration
+  python:
+    - ansible
+    - requests
+  system:
+    - python3-pip
+    - git
